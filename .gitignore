@@ -1,3 +1,4 @@
 .env
 Local Connection.session.sql
 __pycache__/
+.vscode/

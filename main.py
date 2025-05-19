@@ -27,18 +27,20 @@ db = Database_Manager()
 #NOTE: Reset only when recreation is required, after that populate the tables again and indexing as well
 #reset_all_tables(db)
 
-#Dedault endpoint
+#Default endpoint
+
 @app.get("/", response_class=PlainTextResponse)
 def show_welcome_text():
-    return {"message": "Welcome to Forsit_DB_Backend_Assignment, "
-            "You can use the endpoints, the default one is welcome screen"
-            "Examples of some are:\n"
-            "http://127.0.0.1:8000/sales\n"
-            "http://127.0.0.1:8000/revenue/daily\n"
-            "http://127.0.0.1:8000/revenue/weekly\n"
-            "http://127.0.0.1:8000/revenue/monthly\n"
-            "http://127.0.0.1:8000/inventory\n"
-            "For dates you could use the format ?start_date=YYYY-MM-DD&end_date=YYYY-MM-DD (after base link)\n"}
+    return (
+        "Welcome to Forsit_DB_Backend_Assignment,\n"
+        "You can use the endpoints, the default one is welcome screen\n"
+        "Examples of some are:\n"
+        "http://127.0.0.1:8000/sales\n"
+        "http://127.0.0.1:8000/revenue/daily\n"
+        "http://127.0.0.1:8000/revenue/weekly\n"
+        "http://127.0.0.1:8000/revenue/monthly\n"
+        "http://127.0.0.1:8000/inventory\n"
+        "For dates you could use the format ?start_date=YYYY-MM-DD&end_date=YYYY-MM-DD (after base link)\n")
 
 #Below are the sales endpoints
 
